@@ -4,10 +4,10 @@
 
 html, body {
 	padding: 0;
-	margin: 0 auto;
+	margin: 0;
 	height: 100%;
-	min-width: 480px;
-	min-height: 750px;
+	min-width: 400px;
+	min-height: 800px;
 	font-size: 12px;
 	font-family: Times, serif;
 }
@@ -29,7 +29,7 @@ a {
 	align-items: center;
 
 	.info {
-		width: 400px;
+		width: 360px;
 		height: 500px;
 		background-color: white;
 		border-radius: 20px;
@@ -37,14 +37,14 @@ a {
 
 		> .img1 {
 			width: 200px;
-			left: -50px;
+			left: -40px;
 			position:relative;
 			display:inline-block;
 		}
 
 		> .img2 {
 			width: 200px;
-			left: 200px;
+			left: 160px;
 			top: 100px;
 			position:relative;
 			display:inline-block;
@@ -62,13 +62,13 @@ a {
 			border-radius: 50px;
 			display:block;
 			margin: 0 auto;
-			margin-bottom: 8px;
+			margin-bottom: 4px;
 		}
 
 		.name {
 			display:block;
 			text-align: center;
-			margin-bottom: 8px;
+			margin-bottom: 4px;
 		}
 
 		.lang {
@@ -87,7 +87,7 @@ a {
 			margin: 0;
 
 			li {
-				margin-bottom: 8px;
+				margin-bottom: 4px;
 			}
 		}
 	}
