@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0 auto;
+  height: 100%;
+  min-width: 480px;
+  min-height: 750px;
+  font-size: 12px;
+  font-family: Times, serif; }
+
+body {
+  background: #0fe6a4;
+  background: linear-gradient(180deg, rgba(15, 230, 164, 0.4) 38%, rgba(27, 143, 116, 0.4) 81%, rgba(11, 93, 89, 0.4) 100%); }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.wrapper {
+  background: repeat-x url("../images/tools.png");
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center; }
+  .wrapper .info {
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px; }
+    .wrapper .info > .img1 {
+      width: 200px;
+      left: -50px;
+      position: relative;
+      display: inline-block; }
+    .wrapper .info > .img2 {
+      width: 200px;
+      left: 200px;
+      top: 100px;
+      position: relative;
+      display: inline-block; }
+    .wrapper .info .group1 {
+      width: 210px;
+      left: 180px;
+      top: -360px;
+      position: relative; }
+    .wrapper .info .wheel {
+      width: 100px;
+      border-radius: 50px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 8px; }
+    .wrapper .info .name {
+      display: block;
+      text-align: center;
+      margin-bottom: 8px; }
+    .wrapper .info .lang {
+      display: block;
+      text-align: center; }
+    .wrapper .info .group2 {
+      width: 200px;
+      top: -300px;
+      position: relative; }
+    .wrapper .info ul {
+      margin: 0; }
+      .wrapper .info ul li {
+        margin-bottom: 8px; }
+  .wrapper .carousel-wrapper {
+    position: relative; }
+    .wrapper .carousel-wrapper .carousel-item {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 25px 50px;
+      opacity: 0;
+      transition: all 0.5 ease-in-out; }
+      .wrapper .carousel-wrapper .carousel-item .arrow {
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 50px;
+        height: 100%;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+        .wrapper .carousel-wrapper .carousel-item .arrow.arrow-prev {
+          left: 0;
+          background: url("../images/arrow_l.png") 50% 50%/20px no-repeat; }
+        .wrapper .carousel-wrapper .carousel-item .arrow.arrow-next {
+          right: 0;
+          background: url("../images/arrow_r.png") 50% 50%/20px no-repeat; }
+      .wrapper .carousel-wrapper .carousel-item .projects {
+        position: absolute;
+        display: block;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        text-align: center; }
+        .wrapper .carousel-wrapper .carousel-item .projects img {
+          margin-bottom: 8px; }
+      @media (max-width: 480px) {
+        .wrapper .carousel-wrapper .carousel-item .arrow {
+          background-size: 10px;
+          background-position: 10px 50%; } }
+    .wrapper .carousel-wrapper [id^="target-item"] {
+      display: none; }
+    .wrapper .carousel-wrapper .item-1 {
+      z-index: 2;
+      opacity: 1; }
+    .wrapper .carousel-wrapper *:target ~ .item-1 {
+      opacity: 0; }
+    .wrapper .carousel-wrapper #target-item-1:target ~ .item-1 {
+      opacity: 1; }
+    .wrapper .carousel-wrapper #target-item-2:target ~ .item-2, .wrapper .carousel-wrapper #target-item-3:target ~ .item-3 {
+      z-index: 3;
+      opacity: 1; }
+  .wrapper .footer a {
+    margin-right: 4px; }
+  .wrapper .footer .hh {
+    width: 30px; }
+  .wrapper .footer .tg {
+    width: 30px; }
+  .wrapper .footer .vk {
+    width: 30px; }
+
+/*# sourceMappingURL=style.css.map */
