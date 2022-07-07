@@ -52,7 +52,7 @@ html, body, .wrapper {
 }
 
 .wrapper {
-	@include bg("images/table3.jpg");
+	@include bg("../images/table3.jpg");
 
 	@include flex(flex, row wrap, center, center);
 }
@@ -66,7 +66,7 @@ html, body, .wrapper {
 		width:50%;
 		max-width: 300px;
 		margin: 0 auto;
-		padding: 0 0 20px 0;
+		padding: 0 0 0 0;
 	}
 
 	#name {

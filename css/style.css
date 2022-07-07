@@ -14,7 +14,7 @@ html, body, .wrapper {
   color: white; }
 
 .wrapper {
-  background-image: url("images/table3.jpg");
+  background-image: url("../images/table3.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -43,7 +43,7 @@ html, body, .wrapper {
     width: 50%;
     max-width: 300px;
     margin: 0 auto;
-    padding: 0 0 20px 0; }
+    padding: 0 0 0 0; }
   .avatar #name {
     display: block;
     text-align: center; }
