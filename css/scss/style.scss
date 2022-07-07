@@ -42,10 +42,6 @@ html, body, .wrapper {
 	height:100%;
 }
 
-html {
-	@include bg("../images/table3.jpg");
-}
-
 .text {
 	font-family: Arial-black, sans-serif;
 }
@@ -56,7 +52,7 @@ html {
 }
 
 .wrapper {
-	@include bg("../images/table3.jpg");
+	@include bg("images/table3.jpg");
 
 	@include flex(flex, row wrap, center, center);
 }
