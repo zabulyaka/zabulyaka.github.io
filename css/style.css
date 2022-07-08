@@ -1,7 +1,7 @@
 *, *::before, *::after {
   box-sizing: border-box; }
 
-html, body, .wrapper {
+html, body, .start, .projects {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -11,13 +11,13 @@ a {
   text-decoration: none;
   color: black; }
 
-.text, .text-light {
+.text-light {
   font-family: Arial-black, sans-serif; }
 
 .text-light {
   color: white; }
 
-.wrapper {
+.start {
   background-image: url("../images/table3.jpg");
   background-size: cover;
   background-position: center;
@@ -25,36 +25,73 @@ a {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center; }
+  .start div {
+    align-self: flex-end;
+    width: 100%; }
 
-.avatar {
-  width: 400px; }
+.avatar #photo {
+  border-radius: 50%;
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 260px; }
   @media screen and (max-width: 1199px) {
-    .avatar {
-      width: 400px; } }
+    .avatar #photo {
+      width: 260px; } }
   @media screen and (max-width: 899px) {
-    .avatar {
-      width: 300px; } }
+    .avatar #photo {
+      width: 130px; } }
   @media screen and (max-width: 599px) {
-    .avatar {
-      width: 300px; } }
-  .avatar #photo {
-    border-radius: 50%;
-    display: block;
-    width: 50%;
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 0 0 0 0; }
-  .avatar #name {
-    display: block;
-    text-align: center; }
+    .avatar #photo {
+      width: 130px; } }
+.avatar #name {
+  display: block;
+  text-align: center;
+  padding: 20px; }
+
+.arrows {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center; }
+  .arrows a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
+    .arrows a * {
+      padding: 10px; }
+  .arrows img {
+    width: 100px; }
+    @media screen and (max-width: 1199px) {
+      .arrows img {
+        width: 100px; } }
+    @media screen and (max-width: 899px) {
+      .arrows img {
+        width: 50px; } }
+    @media screen and (max-width: 599px) {
+      .arrows img {
+        width: 50px; } }
+
+.projects {
+  background-image: url("../images/table2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start; }
 
 footer {
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: black;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center; }
+  footer img {
+    width: 50px;
+    padding: 0 4px; }
 
 /*# sourceMappingURL=style.css.map */
