@@ -47,7 +47,7 @@
 	box-sizing: border-box;
 }
 
-html, body, .start, .projects {
+html, body, .start, .projects, .info {
 	margin:0;
 	padding:0;
 	width:100%;
@@ -59,6 +59,13 @@ a {
 	color:black;
 }
 
+main {
+	div {
+		//align-self:flex-end;
+		width:100%;
+	}
+}
+
 %text {
 	font-family: Arial-black, sans-serif;
 }
@@ -67,16 +74,11 @@ a {
 	@extend %text;
 	color:white;
 }
-//Start page
+//Start page//
 .start {
 	@include bg("../images/table3.jpg");
 
-	@include flex(flex, row wrap);
-
-	div {
-		align-self:flex-end;
-		width:100%;
-	}
+	@include flex(flex, row wrap, space-between, flex-end);
 
 }
 
@@ -114,13 +116,35 @@ a {
 		@include adapt_w(100px, 100px, 50px, 50px);
 	}
 }
-//Projects page
+//Projects page//
 .projects {
 	@include bg("../images/table2.jpg");
 
-	@include flex(flex, row wrap, flex-start, flex-start);
+	@include flex(flex, row wrap, flex-start, flex-end);
 }
 
+.gallery {
+	align-self:flex-start;
+
+	img {
+		@include adapt_w(400px, 300px, 300px, 300px);
+		border:3px ridge white;
+		margin:10px;
+		filter: grayscale(100%);
+		transition:filter .2s linear;
+
+		&:hover {
+			filter: grayscale(0%);
+			box-shadow: 0 0 6px white;
+		}
+	}
+}
+//Info page//
+.info {
+	@include bg("../images/table3.jpg");
+
+	@include flex(flex, row wrap, flex-start, flex-start);
+}
 footer {
 	width:100%;
 	height:80px;

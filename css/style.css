@@ -1,7 +1,7 @@
 *, *::before, *::after {
   box-sizing: border-box; }
 
-html, body, .start, .projects {
+html, body, .start, .projects, .info {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -10,6 +10,9 @@ html, body, .start, .projects {
 a {
   text-decoration: none;
   color: black; }
+
+main div {
+  width: 100%; }
 
 .text-light {
   font-family: Arial-black, sans-serif; }
@@ -23,11 +26,8 @@ a {
   background-position: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center; }
-  .start div {
-    align-self: flex-end;
-    width: 100%; }
+  justify-content: space-between;
+  align-items: flex-end; }
 
 .avatar #photo {
   border-radius: 50%;
@@ -75,6 +75,36 @@ a {
 
 .projects {
   background-image: url("../images/table2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-end; }
+
+.gallery {
+  align-self: flex-start; }
+  .gallery img {
+    width: 400px;
+    border: 3px ridge white;
+    margin: 10px;
+    filter: grayscale(100%);
+    transition: filter .2s linear; }
+    @media screen and (max-width: 1199px) {
+      .gallery img {
+        width: 300px; } }
+    @media screen and (max-width: 899px) {
+      .gallery img {
+        width: 300px; } }
+    @media screen and (max-width: 599px) {
+      .gallery img {
+        width: 300px; } }
+    .gallery img:hover {
+      filter: grayscale(0%);
+      box-shadow: 0 0 6px white; }
+
+.info {
+  background-image: url("../images/table3.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
