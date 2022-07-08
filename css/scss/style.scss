@@ -74,6 +74,29 @@ main {
 	@extend %text;
 	color:white;
 }
+
+.arrows {
+	@include flex(flex, row nowrap, space-between, center);
+
+	a {
+		@include flex();
+
+		* {
+			margin:10px;
+		}
+	}
+
+	img {
+		@include adapt_w(80px, 80px, 40px, 40px);
+		background-color:white;
+		border-radius:18%;
+		box-shadow: 0 0 6px white;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
 //Start page//
 .start {
 	@include bg("../images/table3.jpg");
@@ -97,23 +120,7 @@ main {
 	#name {
 		display:block;
 		text-align: center;
-		padding:20px;
-	}
-}
-
-.arrows {
-	@include flex(flex, row nowrap, space-between, center);
-
-	a {
-		@include flex();
-
-		* {
-			padding:10px;
-		}
-	}
-
-	img {
-		@include adapt_w(100px, 100px, 50px, 50px);
+		margin:20px;
 	}
 }
 //Projects page//
@@ -127,7 +134,7 @@ main {
 	align-self:flex-start;
 
 	img {
-		@include adapt_w(400px, 300px, 300px, 300px);
+		@include adapt_w(260px, 260px, 130px, 130px);
 		border:3px ridge white;
 		margin:10px;
 		filter: grayscale(100%);
@@ -135,7 +142,6 @@ main {
 
 		&:hover {
 			filter: grayscale(0%);
-			box-shadow: 0 0 6px white;
 		}
 	}
 }

@@ -1,0 +1,107 @@
+@font-face {
+
+    font-family: 'Roboto Regular';
+
+    font-style: normal;
+
+    font-weight: normal;
+
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+
+}
+
+@font-face {
+
+    font-family: 'Roboto Medium';
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    src: url('fonts/Roboto-Medium.ttf') format('truetype');
+
+}
+
+@font-face {
+
+    font-family: 'Roboto Italic';
+
+    font-style: italic;
+
+    font-weight: normal;
+
+    src: url('fonts/Roboto-Italic.ttf') format('truetype');
+
+}
+
+@font-face {
+
+    font-family: 'Philosopher';
+
+    font-style: normal;
+
+    font-weight: normal;
+
+    src: url('fonts/Philosopher-Regular.ttf') format('truetype');
+
+}
+
+@font-face {
+
+    font-family: 'Philosopher Bold';
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    src: url('fonts/Philosopher-Bold.ttf') format('truetype');
+
+}
+
+@font-face {
+
+    font-family: 'Font Awesome 5 Brands';
+
+    font-style: normal;
+
+    font-weight: normal;
+
+    src: url('fonts/fa-brands-400.ttf') format('truetype');
+
+}
+
+@font-face {
+
+    font-family: 'Font Awesome 5 Free';
+
+    font-style: normal;
+
+    font-weight: normal;
+
+    src: url('fonts/fa-regular-400.ttf') format('truetype');
+
+}
+
+@font-face {
+
+    font-family: 'Font Awesome 5 Free Solid';
+
+    font-style: normal;
+
+    font-weight: 900;
+
+    src: url('fonts/fa-solid-900.ttf') format('truetype');
+
+}
+
+@font-face {
+
+    font-family: 'Font Awesome';
+
+    font-style: normal;
+
+    font-weight: normal;
+
+    src: url('fonts/FontAwesome.otf') format('opentype');
+
+}

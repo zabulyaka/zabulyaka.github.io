@@ -20,6 +20,35 @@ main div {
 .text-light {
   color: white; }
 
+.arrows {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center; }
+  .arrows a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
+    .arrows a * {
+      margin: 10px; }
+  .arrows img {
+    width: 80px;
+    background-color: white;
+    border-radius: 18%;
+    box-shadow: 0 0 6px white; }
+    @media screen and (max-width: 1199px) {
+      .arrows img {
+        width: 80px; } }
+    @media screen and (max-width: 899px) {
+      .arrows img {
+        width: 40px; } }
+    @media screen and (max-width: 599px) {
+      .arrows img {
+        width: 40px; } }
+    .arrows img:hover {
+      box-shadow: none; }
+
 .start {
   background-image: url("../images/table3.jpg");
   background-size: cover;
@@ -47,31 +76,7 @@ main div {
 .avatar #name {
   display: block;
   text-align: center;
-  padding: 20px; }
-
-.arrows {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center; }
-  .arrows a {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center; }
-    .arrows a * {
-      padding: 10px; }
-  .arrows img {
-    width: 100px; }
-    @media screen and (max-width: 1199px) {
-      .arrows img {
-        width: 100px; } }
-    @media screen and (max-width: 899px) {
-      .arrows img {
-        width: 50px; } }
-    @media screen and (max-width: 599px) {
-      .arrows img {
-        width: 50px; } }
+  margin: 20px; }
 
 .projects {
   background-image: url("../images/table2.jpg");
@@ -85,23 +90,22 @@ main div {
 .gallery {
   align-self: flex-start; }
   .gallery img {
-    width: 400px;
+    width: 260px;
     border: 3px ridge white;
     margin: 10px;
     filter: grayscale(100%);
     transition: filter .2s linear; }
     @media screen and (max-width: 1199px) {
       .gallery img {
-        width: 300px; } }
+        width: 260px; } }
     @media screen and (max-width: 899px) {
       .gallery img {
-        width: 300px; } }
+        width: 130px; } }
     @media screen and (max-width: 599px) {
       .gallery img {
-        width: 300px; } }
+        width: 130px; } }
     .gallery img:hover {
-      filter: grayscale(0%);
-      box-shadow: 0 0 6px white; }
+      filter: grayscale(0%); }
 
 .info {
   background-image: url("../images/table3.jpg");

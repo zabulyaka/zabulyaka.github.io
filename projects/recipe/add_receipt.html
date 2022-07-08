@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru"
+  xlmns:og="http://ogp.me/ns#"
+  xlmns:fb="http://ogp.me/ns/fb#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Добавить свой рецепт в книгу.">
+  <meta name="keywords" lang="ru" content="добавить свой рецепт, книга рецептов">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://mysite.ru/article/">
+  <meta property="og:title" content="Добавить рецепт">
+  <meta property="og:description" content="Добавить свой рецепт в книгу.">
+  <link rel="stylesheet" type="text/css" href="style/site.css">
+  <title>Добавить рецепт</title>
+</head>
+<body>
+  <div class="area">
+    <header>
+      <h1 name="top">Книга любимых рецептов</h1>
+      <img src="style/images/salad.png" class="header_image col-xs-2 col-sm-2 col-lg-2" />
+      <nav>
+        <ul class="header_menu col-xs-10 col-sm-10 col-lg-10">
+            <li class="menu_button col-xs-7 col-sm-3 col-lg-3"><a href="index.html">На главную</a></li>
+            <li class="menu_button col-xs-7 col-sm-3 col-lg-3"><a href="soup.html">Список рецептов</a></li>
+            <li class="menu_button col-xs-7 col-sm-3 col-lg-3"><a href="add_receipt.html">Добавить рецепт</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main_page col-xs-12 col-sm-12 col-lg-12">
+        <form action="" method="GET">
+          <div class="col-xs-12 col-sm-6 col-lg-6">Выберите категорию:</div>
+          <div class="col-xs-12 col-sm-6 col-lg-6">
+            <input type="radio" name="food_category" value="first" />Супы<br />
+            <input type="radio" name="food_category" value="second" />Вторые блюда<br />
+            <input type="radio" name="food_category" value="candy" />Выпечка<br />
+            <input type="radio" name="food_category" value="meat" />Мясо и рыба<br />
+            <input type="radio" name="food_category" value="fruits" />Овощи-фрукты<br />
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-6">Выберите изображение:</div>
+          <div class="col-xs-12 col-sm-6 col-lg-6">
+            <input type="file" name="food_image" />
+          </div>
+          <div class="col-xs-12 col-sm-12 col-lg-12">Список ингредиентов:</div>
+          <div class="col-xs-6 col-sm-4 col-lg-4">
+            <input type="text" placeholder="ингредиент" />
+          </div>
+          <div class="col-xs-6 col-sm-8 col-lg-8">
+            <input type="text" placeholder="количество" />
+          </div>
+          <div class="col-xs-6 col-sm-4 col-lg-4">
+            <input type="text" placeholder="ингредиент" />
+          </div>
+          <div class="col-xs-6 col-sm-8 col-lg-8">
+            <input type="text" placeholder="количество" />
+          </div>
+          <div class="col-xs-6 col-sm-4 col-lg-4">
+            <input type="text" placeholder="ингредиент" />
+          </div>
+          <div class="col-xs-6 col-sm-8 col-lg-8">
+            <input type="text" placeholder="количество" />
+          </div>
+          <div class="col-xs-6 col-sm-4 col-lg-4">
+            <input type="text" placeholder="ингредиент" />
+          </div>
+          <div class="col-xs-6 col-sm-8 col-lg-8">
+            <input type="text" placeholder="количество" />
+          </div>
+          <div class="col-xs-12 col-sm-12 col-lg-12">Рецептура:</div>
+          <div class="col-xs-12 col-sm-12 col-lg-12">
+            <textarea id="receipt" placeholder="Опишите детали приготовления"></textarea>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-lg-12">
+            <input type="submit" id="submit_button" value="Отправить" />
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <div class="footer_menu col-xs-10 col-sm-10 col-lg-10">
+      <span>Контакты:</span>
+      <a href="https://vk.com/" class="footer_button">VK </a>
+      <a href="https://ok.ru/" class="footer_button">Одноклассники </a>
+      <a href="mailto:food@mail.ru" class="footer_button">food@mail.ru </a>
+    </div>
+    <div class="footer_menu col-xs-2 col-sm-2 col-lg-2"><a href="#top" class="footer_button" id="up">Наверх страницы</a></div>
+  </footer>
+</body>
+</html>
