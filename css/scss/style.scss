@@ -65,10 +65,23 @@ main {
 		//align-self:flex-end;
 		width:100%;
 	}
+
+	&:after {
+		content:"";
+		position:fixed;
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		z-index: -1;
+		display:block;
+
+		@include bg("../images/table3.jpg");
+	}
 }
 
 .text {
-	font-family: Arial-black, sans-serif;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 .text-light {
@@ -100,7 +113,7 @@ main {
 }
 //Start page//
 .start {
-	@include bg("../images/table3.jpg");
+	//@include bg("../images/table3.jpg");
 
 	@include flex(flex, row wrap, space-between, flex-end);
 
@@ -127,9 +140,22 @@ main {
 ////
 //Projects page//
 .projects {
-	@include bg("../images/table2.jpg");
+	//@include bg("../images/table2.jpg");
 
 	@include flex(flex, row wrap, flex-start, flex-end);
+
+	&:after {
+		content:"";
+		position:fixed;
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		z-index: -1;
+		display:block;
+
+		@include bg("../images/table2.jpg");
+	}
 }
 
 .gallery {
@@ -150,7 +176,7 @@ main {
 ////
 //Info page//
 .info {
-	@include bg("../images/table3.jpg");
+	//@include bg("../images/table3.jpg");
 
 	@include flex(flex, row wrap, flex-end, flex-end);
 
@@ -161,8 +187,8 @@ main {
 
 .about {
 	align-self:flex-start;
-	background-color:lightyellow;
-	margin:20px;
+	background-color:rgba(255, 250, 230, .77);
+	margin:10px;
 
 	@include adapt_f();
 

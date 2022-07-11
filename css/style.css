@@ -13,9 +13,22 @@ a {
 
 main div {
   width: 100%; }
+main:after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("../images/table3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
 
 .text, .text-light {
-  font-family: Arial-black, sans-serif; }
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; }
 
 .text-light {
   color: white; }
@@ -50,10 +63,6 @@ main div {
       box-shadow: none; }
 
 .start {
-  background-image: url("../images/table3.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -80,14 +89,23 @@ main div {
   margin: 20px; }
 
 .projects {
-  background-image: url("../images/table2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-end; }
+  .projects:after {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background-image: url("../images/table2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; }
 
 .gallery {
   align-self: flex-start; }
@@ -110,10 +128,6 @@ main div {
       filter: grayscale(0%); }
 
 .info {
-  background-image: url("../images/table3.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
@@ -123,8 +137,8 @@ main div {
 
 .about {
   align-self: flex-start;
-  background-color: lightyellow;
-  margin: 20px;
+  background-color: rgba(255, 250, 230, 0.77);
+  margin: 10px;
   font-size: 16px; }
   @media screen and (max-width: 1199px) {
     .about {
