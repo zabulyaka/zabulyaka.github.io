@@ -2,6 +2,7 @@
 	background-image:url($ref);
 	background-size:cover;
 	background-position:center;
+	background-attachment:fixed;
 }
 
 @mixin flex($disp:flex, $flow:row nowrap, $just:center, $align:center) {
