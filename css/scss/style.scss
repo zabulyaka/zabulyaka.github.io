@@ -66,12 +66,12 @@ main {
 	}
 }
 
-%text {
+.text {
 	font-family: Arial-black, sans-serif;
 }
 
 .text-light {
-	@extend %text;
+	@extend .text;
 	color:white;
 }
 
@@ -123,6 +123,7 @@ main {
 		margin:20px;
 	}
 }
+////
 //Projects page//
 .projects {
 	@include bg("../images/table2.jpg");
@@ -145,12 +146,39 @@ main {
 		}
 	}
 }
+////
 //Info page//
 .info {
 	@include bg("../images/table3.jpg");
 
-	@include flex(flex, row wrap, flex-start, flex-start);
+	@include flex(flex, row wrap, flex-end, flex-end);
+
+	div {
+		justify-content: flex-end;
+	}
 }
+
+.about {
+	align-self:flex-start;
+	background-color:lightyellow;
+	margin:20px;
+
+	@include adapt_f();
+
+	* {
+		margin:14px;
+	}
+
+	ul {
+		list-style-type:"\2794"; 
+	}
+
+	li {
+		padding-left:10px;
+	}
+
+}
+////
 footer {
 	width:100%;
 	height:80px;

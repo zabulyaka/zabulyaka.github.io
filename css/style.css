@@ -14,7 +14,7 @@ a {
 main div {
   width: 100%; }
 
-.text-light {
+.text, .text-light {
   font-family: Arial-black, sans-serif; }
 
 .text-light {
@@ -113,8 +113,31 @@ main div {
   background-position: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start; }
+  justify-content: flex-end;
+  align-items: flex-end; }
+  .info div {
+    justify-content: flex-end; }
+
+.about {
+  align-self: flex-start;
+  background-color: lightyellow;
+  margin: 20px;
+  font-size: 16px; }
+  @media screen and (max-width: 1199px) {
+    .about {
+      font-size: 16px; } }
+  @media screen and (max-width: 899px) {
+    .about {
+      font-size: 12px; } }
+  @media screen and (max-width: 599px) {
+    .about {
+      font-size: 12px; } }
+  .about * {
+    margin: 14px; }
+  .about ul {
+    list-style-type: "\2794"; }
+  .about li {
+    padding-left: 10px; }
 
 footer {
   width: 100%;
