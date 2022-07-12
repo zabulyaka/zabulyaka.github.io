@@ -14,9 +14,7 @@ a {
 main {
   background-image: url("../images/table3.jpg");
   background-size: cover;
-  background-position: center center;
-  background-attachment: scroll;
-  max-width: 100%; }
+  background-position: center; }
   main div {
     width: 100%; }
 
@@ -84,9 +82,7 @@ main {
 .projects {
   background-image: url("../images/table2.jpg");
   background-size: cover;
-  background-position: center center;
-  background-attachment: scroll;
-  max-width: 100%;
+  background-position: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -142,15 +138,12 @@ main {
     padding-left: 10px; }
 
 footer {
-  width: 100%;
-  height: 80px;
-  background-color: black;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center; }
   footer img {
     width: 50px;
-    padding: 0 4px; }
+    padding: 4px; }
 
 /*# sourceMappingURL=style.css.map */
