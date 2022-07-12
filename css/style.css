@@ -5,7 +5,7 @@ html, body, .start, .projects, .info {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh; }
+  height: 90vh; }
 
 a {
   text-decoration: none;
@@ -136,7 +136,7 @@ main {
     padding-left: 10px; }
 
 footer {
-  height: 80px;
+  height: 10vh;
   background-color: black;
   display: flex;
   flex-flow: row nowrap;
@@ -145,5 +145,14 @@ footer {
   footer img {
     width: 50px;
     padding: 4px; }
+    @media screen and (max-width: 1199px) {
+      footer img {
+        width: 50px; } }
+    @media screen and (max-width: 899px) {
+      footer img {
+        width: 30px; } }
+    @media screen and (max-width: 599px) {
+      footer img {
+        width: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
