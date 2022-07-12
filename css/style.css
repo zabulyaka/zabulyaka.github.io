@@ -4,8 +4,8 @@
 html, body, .start, .projects, .info {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%; }
+  width: 100vw;
+  height: 100vh; }
 
 a {
   text-decoration: none;
@@ -13,8 +13,7 @@ a {
 
 main {
   background-image: url("../images/table3.jpg");
-  background-size: cover;
-  background-position: center; }
+  background-size: cover; }
   main div {
     width: 100%; }
 
@@ -82,7 +81,6 @@ main {
 .projects {
   background-image: url("../images/table2.jpg");
   background-size: cover;
-  background-position: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -138,6 +136,8 @@ main {
     padding-left: 10px; }
 
 footer {
+  height: 80px;
+  background-color: black;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
