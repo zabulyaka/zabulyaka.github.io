@@ -1,8 +1,7 @@
 @mixin bg($ref) {
 	background-image:url($ref);
-	//background-size:cover;
-	background-position:top;
-	overflow:hidden;
+	background-size:cover;
+	//background-position:center;
 }
 
 @mixin flex($disp:flex, $flow:row nowrap, $just:center, $align:center) {
@@ -10,6 +9,7 @@
 	flex-flow:$flow;
 	justify-content: $just;
 	align-items: $align;
+	flex:0 0 0;
 }
 
 @mixin adapt_w($width, $w_lg, $w_md, $w_sm) {
@@ -81,6 +81,7 @@ main {
 
 .arrows {
 	@include flex(flex, row nowrap, space-between, center);
+	min-width:100vw;
 
 	a {
 		@include flex();
