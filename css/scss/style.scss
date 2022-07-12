@@ -1,8 +1,9 @@
 @mixin bg($ref) {
 	background-image:url($ref);
 	background-size:cover;
-	background-position:center;
-	background-attachment:fixed;
+	background-position:center center;
+	background-attachment:scroll;
+	max-width: 100%;
 }
 
 @mixin flex($disp:flex, $flow:row nowrap, $just:center, $align:center) {
@@ -55,18 +56,6 @@ html, body, .start, .projects, .info {
 	height:100%;
 }
 
-body:after {
-	content:"";
-		position:fixed;
-		left:0;
-		top:0;
-		right:0;
-		bottom:0;
-		z-index: -1;
-		display:block;
-
-		@include bg("../images/table3.jpg");
-}
 a {
 	text-decoration: none;
 	color:black;
@@ -77,6 +66,8 @@ main {
 		//align-self:flex-end;
 		width:100%;
 	}
+
+	@include bg("../images/table3.jpg");
 }
 
 .text {
@@ -112,15 +103,11 @@ main {
 }
 //Start page//
 .start {
-	//@include bg("../images/table3.jpg");
-
 	@include flex(flex, row wrap, space-between, flex-end);
 
 }
 
 .avatar {
-	//@include adapt_w(400px, 400px, 300px, 300px);
-
 	#photo {
 		border-radius:50%;
 		display:block;
@@ -139,7 +126,7 @@ main {
 ////
 //Projects page//
 .projects {
-	//@include bg("../images/table2.jpg");
+	@include bg("../images/table2.jpg");
 
 	@include flex(flex, row wrap, flex-start, flex-end);
 }
@@ -162,8 +149,6 @@ main {
 ////
 //Info page//
 .info {
-	//@include bg("../images/table3.jpg");
-
 	@include flex(flex, row wrap, flex-end, flex-end);
 
 	div {
