@@ -9,11 +9,13 @@ html, body, .start, .projects, .info {
 
 a {
   text-decoration: none;
-  color: black; }
+  color: black;
+  font-size: 0; }
 
 main {
   background-image: url("../images/table3.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-position: top; }
   main div {
     width: 100%; }
 
@@ -32,7 +34,17 @@ main {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    font-size: 16px; }
+    @media screen and (max-width: 1199px) {
+      .arrows a {
+        font-size: 16px; } }
+    @media screen and (max-width: 899px) {
+      .arrows a {
+        font-size: 12px; } }
+    @media screen and (max-width: 599px) {
+      .arrows a {
+        font-size: 12px; } }
     .arrows a * {
       margin: 10px; }
   .arrows img {
@@ -76,11 +88,12 @@ main {
 .avatar #name {
   display: block;
   text-align: center;
-  margin: 20px; }
+  margin: 20px 0 0 0; }
 
 .projects {
   background-image: url("../images/table2.jpg");
   background-size: cover;
+  background-position: top;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -91,7 +104,7 @@ main {
   .gallery img {
     width: 260px;
     border: 3px ridge white;
-    margin: 10px;
+    margin: 10px 0 0 10px;
     filter: grayscale(100%);
     transition: filter .2s linear; }
     @media screen and (max-width: 1199px) {
