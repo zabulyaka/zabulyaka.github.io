@@ -1,7 +1,8 @@
 @mixin bg($ref) {
 	background-image:url($ref);
-	background-size:cover;
+	//background-size:cover;
 	background-position:top;
+	overflow:hidden;
 }
 
 @mixin flex($disp:flex, $flow:row nowrap, $just:center, $align:center) {
@@ -63,7 +64,7 @@ a {
 main {
 	div {
 		//align-self:flex-end;
-		width:100%;
+		width:100vw;
 	}
 
 	@include bg("../images/table3.jpg");

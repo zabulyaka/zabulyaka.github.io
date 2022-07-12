@@ -14,10 +14,10 @@ a {
 
 main {
   background-image: url("../images/table3.jpg");
-  background-size: cover;
-  background-position: top; }
+  background-position: top;
+  overflow: hidden; }
   main div {
-    width: 100%; }
+    width: 100vw; }
 
 .text, .text-light {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; }
@@ -92,8 +92,8 @@ main {
 
 .projects {
   background-image: url("../images/table2.jpg");
-  background-size: cover;
   background-position: top;
+  overflow: hidden;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
