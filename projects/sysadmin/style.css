@@ -20,18 +20,9 @@ button:hover {
 .body-wrap {
 	display: flex;
 	flex-flow: column nowrap;
-	justify-content: space-between;
+	justify-content: safe start;
 	color: white;
 	font-family: sans-serif;
-}
-.body-wrap:before {
-	content: "";
-	background-color: #130b5b;
-	display: block;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	z-index: -6;
 }
 .body-wrap > div {
 	display: grid;
@@ -75,14 +66,19 @@ button:hover {
 	border-radius: 38px;
 	font-size: 1.2vw;
 	letter-spacing: 0.04vw;
+	display: block;
 }
 .main__area1 {
 	background: no-repeat url("практика/фон.png");
-	background-position: top -89px right 0px;
+	/*background-position: top -89px right 0px;*/
+	background-size: cover;
+	/*
 	position: absolute;
 	width: 100%;
-	height: 90%;
-	z-index: -3;
+	height: 100%;
+	z-index: -3;*/
+	grid-column: 1/5;
+	grid-row: 1/4;
 }
 .main__area2 {
 	grid-column: 1/5;
@@ -261,7 +257,7 @@ button:hover {
 .footer__mail {
 	font-size: 1.2vw;
 	line-height: 1.47vw;
-	letter-spacing: -0.05vw;s
+	letter-spacing: -0.05vw;
 }
 .footer__phone {
 	font-size: 1.25vw;
