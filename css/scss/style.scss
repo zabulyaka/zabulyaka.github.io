@@ -63,7 +63,7 @@ a {
 }
 
 main {
-	@include bg("../images/table3.jpg");
+	@include bg("../images/jpg/table.jpg");
 }
 
 .text {
@@ -136,7 +136,7 @@ footer {
 //end//
 ////////////Projects//
 .projects {
-	@include bg("../images/table2.jpg");
+	@include bg("../images/jpg/table_d.jpg");
 
 	@include flex(flex, row wrap, flex-start, flex-end);
 }
