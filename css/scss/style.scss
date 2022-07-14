@@ -9,7 +9,6 @@
 	flex-flow:$flow;
 	justify-content: $just;
 	align-items: $align;
-	flex:0 0 0;
 }
 
 @mixin adapt_w($width, $w_lg, $w_md, $w_sm) {
@@ -48,7 +47,7 @@
 	box-sizing: border-box;
 }
 
-html, body, .start, .projects, .info {
+main {
 	margin:0;
 	padding:0;
 	width:100vw;
@@ -81,7 +80,6 @@ main {
 
 .arrows {
 	@include flex(flex, row nowrap, space-between, center);
-	min-width:100vw;
 
 	a {
 		@include flex();
@@ -181,8 +179,8 @@ main {
 ////
 footer {
 	//width:100%;
-	//height:80px;
-	height:10vh;
+	height:80px;
+	//height:10vh;
 	background-color:black;
 
 	@include flex();

@@ -1,7 +1,7 @@
 *, *::before, *::after {
   box-sizing: border-box; }
 
-html, body, .start, .projects, .info {
+main {
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -28,15 +28,12 @@ main {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
-  flex: 0 0 0;
-  min-width: 100vw; }
+  align-items: center; }
   .arrows a {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    flex: 0 0 0;
     font-size: 16px; }
     @media screen and (max-width: 1199px) {
       .arrows a {
@@ -70,8 +67,7 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: flex-end;
-  flex: 0 0 0; }
+  align-items: flex-end; }
 
 .avatar #photo {
   border-radius: 50%;
@@ -99,8 +95,7 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  align-items: flex-end;
-  flex: 0 0 0; }
+  align-items: flex-end; }
 
 .gallery {
   align-self: flex-start; }
@@ -126,8 +121,7 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-  align-items: flex-end;
-  flex: 0 0 0; }
+  align-items: flex-end; }
   .info div {
     justify-content: flex-end; }
 
@@ -153,13 +147,12 @@ main {
     padding-left: 10px; }
 
 footer {
-  height: 10vh;
+  height: 80px;
   background-color: black;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;
-  flex: 0 0 0; }
+  align-items: center; }
   footer img {
     width: 50px;
     padding: 4px; }
