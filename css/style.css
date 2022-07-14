@@ -5,7 +5,7 @@ html, body, main {
   margin: 0;
   padding: 0;
   width: 100vw;
-  min-height: 100vh; }
+  min-height: 90vh; }
 
 a {
   text-decoration: none;
@@ -14,10 +14,8 @@ a {
 
 main {
   background-image: url("../images/table3.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center; }
-  main div {
-    width: 100vw; }
 
 .text, .text-light {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; }
@@ -26,6 +24,7 @@ main {
   color: white; }
 
 .arrows {
+  width: 100vw;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -64,17 +63,36 @@ main {
     .arrows img:hover {
       box-shadow: none; }
 
+footer {
+  min-height: 10vh;
+  background-color: black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; }
+  footer img {
+    width: 50px;
+    padding: 4px; }
+    @media screen and (max-width: 1199px) {
+      footer img {
+        width: 50px; } }
+    @media screen and (max-width: 899px) {
+      footer img {
+        width: 30px; } }
+    @media screen and (max-width: 599px) {
+      footer img {
+        width: 30px; } }
+
 .start {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end; }
 
 .avatar #photo {
   border-radius: 50%;
   display: block;
   max-width: 300px;
-  margin: 0 auto;
   width: 260px; }
   @media screen and (max-width: 1199px) {
     .avatar #photo {
@@ -88,11 +106,11 @@ main {
 .avatar #name {
   display: block;
   text-align: center;
-  margin: 20px 0 0 0; }
+  margin-top: 20px; }
 
 .projects {
   background-image: url("../images/table2.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   display: flex;
   flex-flow: row wrap;
@@ -122,15 +140,15 @@ main {
 .info {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end; }
   .info div {
     justify-content: flex-end; }
 
 .about {
-  align-self: flex-start;
   background-color: rgba(255, 250, 230, 0.77);
   margin: 10px;
+  align-self: flex-start;
   font-size: 16px; }
   @media screen and (max-width: 1199px) {
     .about {
@@ -147,25 +165,5 @@ main {
     list-style-type: "\2794"; }
   .about li {
     padding-left: 10px; }
-
-footer {
-  height: 10vh;
-  background-color: black;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center; }
-  footer img {
-    width: 50px;
-    padding: 4px; }
-    @media screen and (max-width: 1199px) {
-      footer img {
-        width: 50px; } }
-    @media screen and (max-width: 899px) {
-      footer img {
-        width: 30px; } }
-    @media screen and (max-width: 599px) {
-      footer img {
-        width: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
