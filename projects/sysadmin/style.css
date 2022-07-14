@@ -70,13 +70,7 @@ button:hover {
 }
 .main__area1 {
 	background: no-repeat url("практика/фон.png");
-	/*background-position: top -89px right 0px;*/
 	background-size: cover;
-	/*
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: -3;*/
 	grid-column: 1/5;
 	grid-row: 1/4;
 }
@@ -125,7 +119,6 @@ button:hover {
 	border-radius: 34px;
 	font-size: 1.22vw;
 	margin-top: 4.5vw;
-	padding: 0 0.2vw 0.7vw 0;
 }
 .area1__info {
 	grid-column: 2/4;
