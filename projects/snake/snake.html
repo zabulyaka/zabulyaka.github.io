@@ -6,13 +6,15 @@
 	<title>Змейка</title>
 </head>
 <body>
-	<canvas style="display: block" id="canvas" width="300" height="300"></canvas>
+	<div style="display: block; width: 300px; margin:0 auto">
+		<canvas style="display: block" id="canvas" width="300" height="300"></canvas>
 
-	<div style="display: grid; grid-template-columns: 100px 100px 100px; grid-auto-rows: minmax(min-content, max-content)">
-		<img class="up" src="arrow.png" style="width: 100px; grid-column: 2/3; grid-row: 1/2" alt="arrow">
-		<img class="right" src="arrow.png" style="width: 100px; transform:rotate(90deg); grid-column: 3/4; grid-row: 2/3" alt="arrow">
-		<img class="down" src="arrow.png" style="width: 100px; transform:rotate(180deg); grid-column: 2/3; grid-row: 2/3" alt="arrow">
-		<img class="left" src="arrow.png" style="width: 100px; transform:rotate(270deg); grid-column: 1/2; grid-row: 2/3" alt="arrow">
+		<div style="display: grid; grid-template-columns: 100px 100px 100px; grid-auto-rows: minmax(min-content, max-content)">
+			<img class="up" src="arrow.png" style="width: 100px; grid-column: 2/3; grid-row: 1/2" alt="arrow">
+			<img class="right" src="arrow.png" style="width: 100px; transform:rotate(90deg); grid-column: 3/4; grid-row: 2/3" alt="arrow">
+			<img class="down" src="arrow.png" style="width: 100px; transform:rotate(180deg); grid-column: 2/3; grid-row: 2/3" alt="arrow">
+			<img class="left" src="arrow.png" style="width: 100px; transform:rotate(270deg); grid-column: 1/2; grid-row: 2/3" alt="arrow">
+		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
@@ -51,7 +53,7 @@
 
 		var gameOver = function () {
 			clearTimeout(gameLoop);
-			//directions = 0;
+			directions = 0;
 			ctx.font = "32px Courier";
 			ctx.fillStyle = "Black";
 			ctx.textAlign = "center";
@@ -138,8 +140,8 @@
 				score++;
 				animationTime--;
 				stone.number++;
-				apple.move();
 				stone.move();
+				apple.move();
 			} else {
 				this.segments.pop();
 			}
@@ -181,7 +183,7 @@
 				return;
 			} else if (this.direction === "left" && newDirection === "right") {
 				return;
-			}
+			} else if (directions === 0) return;
 
 			this.nextDirection = newDirection;
 		};
@@ -199,18 +201,14 @@
 			var randomRow = Math.floor(Math.random() * (heightInBlocks - 2)) +1;
 			var test = new Block(randomCol, randomRow);
 
-			for(i=0;i<snake["segments"].length - 1;i++) {
-				if (!(snake["segments"][i].equal(test))) {
-					for(j=0;j<stone["stones"].length - 1;j++) {
-						if (stone["stones"][i].equal(test)) this.move();
-					}
-					this.position = test; 
-				} else this.move();
+			for(i=0;i<stone["stones"].length - 1;i++) {
+				if (stone["stones"][i].equal(test)) this.move();
+				else this.position = test;
 			}
 		};
 
 		var Stone = function() {
-			this.stones = [new Block (20, 20)];
+			this.stones = [new Block (30, 20)];
 		};
 
 		Stone.prototype.draw = function() {
@@ -225,10 +223,8 @@
 			var test = new Block(randomCol, randomRow);
 
 			for(i=0;i<snake["segments"].length - 1;i++) {
-				if (!(snake["segments"][i].equal(test) && apple.position.equal(test)))
-					this.stones.push(test);
-
-				else this.move();
+				if (snake["segments"][i].equal(test)) this.move();
+				else this.stones.push(test);
 			}
 		};
 
@@ -240,11 +236,11 @@
 			ctx.clearRect(0, 0, width, height);
 			drawField();
 			drawScore();
+			drawBorder();
+			stone.draw();
+			apple.draw();
 			snake.move();
 			snake.draw();
-			apple.draw();
-			stone.draw();
-			drawBorder();
 			setTimeout(gameLoop, animationTime);
 		}
 		gameLoop();
@@ -264,16 +260,24 @@
 		});
 		
 		$(".up").click(function() {
-			snake.setDirection("up");
+			var newDirection = directions[38];
+
+			snake.setDirection(newDirection);
 		});
 		$(".right").click(function() {
-			snake.setDirection("right");
+			var newDirection = directions[39];
+
+			snake.setDirection(newDirection);
 		});
 		$(".down").click(function() {
-			snake.setDirection("down");
+			var newDirection = directions[40];
+
+			snake.setDirection(newDirection);
 		});
 		$(".left").click(function() {
-			snake.setDirection("left");
+			var newDirection = directions[37];
+
+			snake.setDirection(newDirection);
 		});
 
 	</script>
