@@ -10,10 +10,12 @@
 		<canvas style="display: block" id="canvas" width="300" height="300"></canvas>
 
 		<div style="display: grid; grid-template-columns: 100px 100px 100px; grid-auto-rows: minmax(min-content, max-content)">
+			<button style="width: 80px; height: 60px; border:10px solid grey; font-family:'Courier'" onclick="window.location.reload()">Начать заново</button>
 			<img class="up" src="arrow.png" style="width: 100px; grid-column: 2/3; grid-row: 1/2" alt="arrow">
 			<img class="right" src="arrow.png" style="width: 100px; transform:rotate(90deg); grid-column: 3/4; grid-row: 2/3" alt="arrow">
 			<img class="down" src="arrow.png" style="width: 100px; transform:rotate(180deg); grid-column: 2/3; grid-row: 2/3" alt="arrow">
 			<img class="left" src="arrow.png" style="width: 100px; transform:rotate(270deg); grid-column: 1/2; grid-row: 2/3" alt="arrow">
+			<div style="margin-left: auto; width: 60px; height: 40px; grid-column: 3/4; grid-row: 1/2; border:10px solid grey"><span style="font-size: 14px; font-family:'Courier'">Счёт:</span><div class="score" style="text-align: center; font-family: 'Georgia', sans-serif">0</div></div>
 		</div>
 	</div>
 
@@ -27,7 +29,7 @@
 			blockSize = 10,
 			widthInBlocks = width/blockSize,
 			heightInBlocks = height/blockSize,
-			animationTime = 120,
+			animationTime = 150,
 			score = 0;
 
 		var drawBorder = function() {
@@ -44,11 +46,7 @@
 		};
 
 		var drawScore = function () {
-			ctx.font = "16px Courier";
-			ctx.fillStyle = "Black";
-			ctx.textAlign = "left";
-			ctx.textBaseline = "top";
-			ctx.fillText("Счет: " + score, blockSize, blockSize);
+			document.querySelector(".score").innerHTML = score;
 		};
 
 		var gameOver = function () {
@@ -142,6 +140,14 @@
 				stone.number++;
 				stone.move();
 				apple.move();
+				red_apple.move();
+			} else if (newHead.equal(red_apple.position)) {
+				score+=3;
+				animationTime-=5;
+				stone.number++;
+				stone.move();
+				apple.move();
+				red_apple.move();
 			} else {
 				this.segments.pop();
 			}
@@ -204,6 +210,7 @@
 			for(i=0;i<stone["stones"].length - 1;i++) {
 				if (stone["stones"][i].equal(test)) this.move();
 				else this.position = test;
+				red_apple.timer = 2;
 			}
 		};
 
@@ -231,6 +238,13 @@
 		var snake = new Snake();
 		var apple = new Apple();
 		var stone = new Stone();
+		var red_apple = new Apple();
+
+		red_apple.timer = 2;
+		red_apple.draw = function() {
+			this.timer--;
+			if (this.timer > 0) this.position.drawCircle("Red");
+		}
 
 		var gameLoop = function() {
 			ctx.clearRect(0, 0, width, height);
@@ -239,10 +253,12 @@
 			drawBorder();
 			stone.draw();
 			apple.draw();
+			red_apple.draw();
 			snake.move();
 			snake.draw();
 			setTimeout(gameLoop, animationTime);
 		}
+		alert("Начать игру 'Змейка'");
 		gameLoop();
 		var directions = {
 			37: "left",
