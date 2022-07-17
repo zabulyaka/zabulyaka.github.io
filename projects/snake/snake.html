@@ -27,7 +27,7 @@
 			blockSize = 10,
 			widthInBlocks = width/blockSize,
 			heightInBlocks = height/blockSize,
-			animationTime = 100,
+			animationTime = 120,
 			score = 0;
 
 		var drawBorder = function() {
@@ -138,7 +138,7 @@
 			this.segments.unshift(newHead);
 			if (newHead.equal(apple.position)) {
 				score++;
-				animationTime--;
+				animationTime-=3;
 				stone.number++;
 				stone.move();
 				apple.move();
